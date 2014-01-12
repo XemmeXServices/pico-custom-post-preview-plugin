@@ -10,7 +10,7 @@
  * @author Christian Evans
  * @link https://github.com/Jecomire/pico-custom-post-preview-plugin
  * @license http://opensource.org/licenses/MIT
- * @Version 0.1
+ * @version 0.1
  */
 class Pico_Custom_post_Preview {
 
@@ -35,22 +35,19 @@ class Pico_Custom_post_Preview {
 	/* This hooks runs just after fill $data array (ie page.title and so on) */
 	public function get_page_data(&$data, $page_meta)
 	{
-		/* Let's add new field into $data array -- i.e. cutted page.content */
-
-		/* NEED: php 5.3.0+ */
 		$pos = 0;
 		$pos = stripos ( $data['content'], $this->read_more_tag );
 		$cutted = $data['excerpt'];
 
 		if ($pos !== false) {
 			/* if we find $read_more_tag in the content(parsed one) */
+			/* NEED: php 5.3.0+ */
 			$cutted = stristr($data['content'], $this->read_more_tag, true);
 			$cutted .= $this->read_more_text;
 		}
 
+		/* Let's add new field into $data array -- i.e. cutted page.content */
 		$data['cpp_preview'] = $cutted;
 	}
 
 }
-
-?>
