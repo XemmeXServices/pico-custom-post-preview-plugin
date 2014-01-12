@@ -1,7 +1,7 @@
 Pico Custom Post Preview Plugin
 ===============================
 
-Provides ability to customise post's preview text (mainly useful for blogs).
+Provides ability to customise a post's preview text (mainly useful for blogs).
 
 ## Installation
 
@@ -12,7 +12,7 @@ php >= 5.3.0 (stristr)
 ### Install
 
 1. Download a copy and extract the `pico_custom_post_preview.php` in your `plugins` folder;
-2. [Setup your theme][cpp_setup_theme]
+2. [Setup your theme][cpp_setup_theme];
 3. Enjoy it :)
 
 
@@ -34,8 +34,8 @@ Also you could append some text after such post-preview (` &hellip;` by default)
 
 ### Setup theme
 
-All you need to do is add `{{ page.cpp_preview }}` directive into your theme's `index.html`
-in the place where you want post preview.
+All you need to do is to add `{{ page.cpp_preview }}` directive into your theme's `index.html`
+in the place where you want a post preview (for example, just instead `{{ page.excerpt }}`).
 
 #### Example
 
@@ -62,5 +62,5 @@ You can change the defaults, by editing your `config.php` file.
 MIT.
 
 
-[cpp_setup_theme]: 
+[cpp_setup_theme]:https://github.com/Jecomire/pico-custom-post-preview-plugin#setup-theme
 [pico-git]:https://github.com/gilbitron/Pico
