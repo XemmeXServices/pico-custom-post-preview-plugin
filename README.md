@@ -39,23 +39,26 @@ in the place where you want a post preview (for example, just instead `{{ page.e
 
 #### Example
 
-	{% for page in pages %}
-	{% if page.date and not(page.url == base_url~'/') %}
-	<div class="post">
-	    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-	    <p class="meta">{{ page.date_formatted }}</p>
-	    <div class="excerpt">{{ page.cpp_preview }}</div>
-	</div>
-	{% endif %}
-	{% endfor %}
-
+```html
+{% for page in pages %}
+{% if page.date and not(page.url == base_url~'/') %}
+<div class="post">
+    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+    <p class="meta">{{ page.date_formatted }}</p>
+    <div class="excerpt">{{ page.cpp_preview }}</div>
+</div>
+{% endif %}
+{% endfor %}
+```
 
 ### Configuration
 
 You can change the defaults, by editing your `config.php` file.
 
-	$config['cpp_read_more_tag'] = '<!--cut-here-->'; // default
-	$config['cpp_read_more_text'] = ' &hellip;'; // default (mean correct ' ...')
+```php
+$config['cpp_read_more_tag'] = '<!--cut-here-->'; // default
+$config['cpp_read_more_text'] = ' &hellip;'; // default (mean correct ' ...')
+```
 
 ## License
 
