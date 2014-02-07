@@ -7,7 +7,7 @@ Provides ability to customise a post's preview text (mainly useful for blogs).
 
 ### Requirements
 
-php >= 5.3.0 (stristr)
+* php >= 5.3.0 (stristr)
 
 ### Install
 
